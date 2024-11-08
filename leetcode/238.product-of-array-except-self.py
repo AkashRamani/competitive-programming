@@ -7,7 +7,6 @@
 # @lc code=start
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
-
         '''
         Solution2 ==> Time O(n); Space O(1)
 
@@ -31,6 +30,7 @@ class Solution:
 
 
         '''
+        ###########################################################
         Solution1 ==> Time O(n); Space O(n)
         idea/though process
             4,  5,  1,  2
@@ -60,5 +60,5 @@ class Solution:
 
         # return output
 
-# @lc code=end
 
+# @lc code=end

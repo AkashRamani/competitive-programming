@@ -14,6 +14,7 @@ class Solution:
 
         # The fact that it is sorted we can use two pointer approach and get get to a solution 
         # (since it has a unique solution)
+        #O(n) time and O(1) space 
 
         left = 0
         right = len(numbers)-1

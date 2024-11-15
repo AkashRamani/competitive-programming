@@ -43,7 +43,16 @@ class MinStack:
         _, min_val = self.stack[self.stack_top]
         return min_val
         
-    #Alternatively you can also maintain a second stack!
+    '''
+    #Alternatively you can also maintain a second stack for minimums! 
+    # whenever you encounter a value <= min you store in the stack
+    # when you pop; check if min_stack_top == stack_top; if yes pop from min_stack as well
+    '''
+    
+    '''
+    To further improve.. notice if 1 keeps on repeating {consecutively as a min value} too often in stack, we will store it as many times it appears.
+    We can optimize that by storing a count next to it.. but it's Meh (not really reqd.)
+    '''
 
 
 # Your MinStack object will be instantiated and called as such:

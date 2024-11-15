@@ -7,7 +7,7 @@
 # @lc code=start
 class Solution:
     def isValid(self, s: str) -> bool:
-        #Next time encountering this quesiton implement your own stack will all necessary methods and use it
+        # Next time encountering this quesiton implement your own stack will all necessary methods and use it
 
         #Time: O(n); Space: O(n) -- stack
         hash_brackets = {'(':')', '{':'}', '[': ']'}

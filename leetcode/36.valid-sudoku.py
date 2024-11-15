@@ -38,6 +38,8 @@ class Solution:
                 rows[row].add(element)
                 squares[(row//3, col//3)].add(element)
         return True
+    
+        '''Implement a solution that uses bit mask to do so, instead of hash maps'''
         
 # @lc code=end
 

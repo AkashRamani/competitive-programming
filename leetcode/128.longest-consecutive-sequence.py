@@ -13,7 +13,7 @@ class Solution:
             if not nums[i]-1 in num_set:
                 current_lcs = 1
                 num = nums[i]
-                #sum total of times, while will be iterated is n
+                #sum total of times, while will be iterated is 2n
                 while num+1 in num_set:
                     num +=1
                     current_lcs+=1

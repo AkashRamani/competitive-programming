@@ -11,6 +11,10 @@ class Solution:
         :type nums: List[int]
         :rtype: int
         """
+        
+        '''
+            Invest more time and study this problem more carefully.
+        '''
         if len(nums)==0:
             return -1
         if len(nums)==1:

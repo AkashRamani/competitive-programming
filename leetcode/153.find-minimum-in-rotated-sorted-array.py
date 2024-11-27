@@ -7,10 +7,6 @@
 # @lc code=start
 class Solution:
     def findMin(self, nums: List[int]) -> int:
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
         
         '''
             Invest more time and study this problem more carefully.

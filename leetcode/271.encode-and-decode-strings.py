@@ -24,6 +24,17 @@ class Codec:
             strs.append(s[start_index: end_index])
         
         return strs
+    
+class Codec2:
+    def encode(self, strs: List[str]) -> str:
+        """Encodes a list of strings to a single string.
+        """
+        return "π".join(strs)
+
+    def decode(self, s: str) -> List[str]:
+        """Decodes a single string to a list of strings.
+        """
+        return str.split("π")
 
 
 # Your Codec object will be instantiated and called as such:

@@ -4,6 +4,8 @@
 # [36] Valid Sudoku
 #
 
+from typing import List
+
 # @lc code=start
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
@@ -40,6 +42,36 @@ class Solution:
         return True
     
         '''Implement a solution that uses bit mask to do so, instead of hash maps'''
-        
+
+class Solution2:
+    def isValidSudoku(self, board: List[List[str]]) -> bool:
+        rows = {key: set() for key in range(0,9)}
+        cols = {key: set() for key in range(0,9)}
+        blocks = {key: set() for key in range(0,9)}
+
+        for i in range(0,9):
+            for j in range(0,9):
+                if board[i][j] == ".":
+                    continue
+                if int(board[i][j]) in rows[i] or int(board[i][j]) in cols[j] or int(board[i][j]) in blocks[(i//3)*3 + j//3]:
+                    return False
+                
+                rows[i].add(int(board[i][j]))
+                cols[j].add(int(board[i][j]))
+                blocks[(i//3)*3 + j//3].add(int(board[i][j]))
+        return True       
+    
+sol = Solution2()
+ans = sol.isValidSudoku([["8","3",".",".","7",".",".",".","."]
+,["6",".",".","1","9","5",".",".","."]
+,[".","9","8",".",".",".",".","6","."]
+,["8",".",".",".","6",".",".",".","3"]
+,["4",".",".","8",".","3",".",".","1"]
+,["7",".",".",".","2",".",".",".","6"]
+,[".","6",".",".",".",".","2","8","."]
+,[".",".",".","4","1","9",".",".","5"]
+,[".",".",".",".","8",".",".","7","9"]]
+)
+print(f"function returned: {ans}")
 # @lc code=end
 

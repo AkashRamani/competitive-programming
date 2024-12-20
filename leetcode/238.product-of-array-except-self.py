@@ -60,5 +60,32 @@ class Solution:
 
         # return output
 
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        '''
+        Solution2 ==> Time O(n); Space O(1)
+
+        NOTE - Description says, the output array does not count as extra space for space complexity analysis
+        This is essentially Solution1 implemented with optimal use of memoery,
+
+        '''
+        
+        ans = []
+        post_prod = 1
+
+        if len(nums) > 1:
+            left_index = 1
+            right_index = len(nums) - 2
+
+            for i in range(left_index, len(nums)):
+                ans.append(ans[-1]*nums[i-1])
+
+            for i in range(right_index,-1,-1):
+                post_prod = post_prod * nums[i+1]
+                ans[i] = post_prod * ans[i-1]
+
+            return ans
+        
+        return nums
 
 # @lc code=end

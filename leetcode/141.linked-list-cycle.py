@@ -13,7 +13,15 @@
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
-        # Time: O(n) and Space: O(1)
+        # Time: O(n) and Space: O(1). 
+        '''
+        Floyd's Cycle Detection Algorithm: 
+        - We use two pointers, fast and slow. fast moves 2x speed of slow
+        - If there is a cycle, they will meet at some point.
+            - why? because difference in relative speed is 1, so slow will cover the distance between them
+
+        - If there is no cycle, hare will reach end of LL (None ptr).        
+        '''
         hare = head
         tort = head
 
@@ -30,7 +38,6 @@ class Solution:
 
         ''' 
         Time: O(n) and Space: O(1)
-
         Had to use dummy head ^ avoided that in solution above (it is more clean)
         
         '''

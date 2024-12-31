@@ -26,7 +26,7 @@ class Solution:
         if k == 1:
             return head
 
-        def twist_ll(pre, head):
+        def twist_ll_and_attach(pre, head):
             tail = pre.next
             post = head.next
 
@@ -59,7 +59,7 @@ class Solution:
 
                 next_segment = curr.next
 
-                pre = twist_ll(pre, start)
+                pre = twist_ll_and_attach(pre, start)
 
                 curr = next_segment
 

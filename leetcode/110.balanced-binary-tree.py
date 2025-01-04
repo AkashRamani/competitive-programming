@@ -16,6 +16,9 @@ class Solution:
 
         ''' 
             | left_height - right_height | <= 1   ∀ nodes
+            
+            Time Space: O(n) ~ O(h) .. if I use the second approach that sort of does an early return 
+                                        and hence it is always like traversing a balanced binary tree. O(h) = O(log n)
         '''
         # self.is_balanced = True
 

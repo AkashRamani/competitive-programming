@@ -8,7 +8,7 @@
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         
-            ans = set()
+        ans = set()
         def back_track(subset, array):
             ans.add(subset)
             for i,elem in enumerate(array):

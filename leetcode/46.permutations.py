@@ -15,7 +15,7 @@ class Solution:
                         iterate through each permutation:
                             within each permuttion => insert element (first elem of array) to all possible places and record
 
-            Time: O(N!) ==> Linear in #of combos generated
+            Time: O(N* N!) == N! == N^N ==> Linear in #of combos generated 
             Space: O(N!)  ==> To store N! permutations.. Linear in #of combos generated
         ''' 
 

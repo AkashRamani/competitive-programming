@@ -46,6 +46,6 @@ class Solution:
                     right_diag.remove((row+col))
 
         backtrack(0)
-
+        return valid_solutions
 # @lc code=end
 

@@ -11,6 +11,12 @@ class Solution:
         """
         Do not return anything, modify rooms in-place instead.
         """
+        
+        '''
+            Time: O(V+E) ~ O(m*n) in this case -- to traverse all the rooms 
+                    Note: A single land node can be visited more than once.. but more water nodes means less land nodes .. so we can ignore that
+            Space: O(V+E) ~ O(m*n) in this case -- for the level dictionary/frontier in BFS
+        '''
         DIR = [(0,1), (0,-1), (1,0), (-1,0)]
 
         def bfs(row,col):

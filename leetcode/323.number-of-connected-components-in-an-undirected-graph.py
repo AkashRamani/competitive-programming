@@ -1,3 +1,5 @@
+class Solution:
+    def countComponents(self, n: int, edges: List[List[int]]) -> int:
 
         '''
             DFS.. but run an outer loop over all the node

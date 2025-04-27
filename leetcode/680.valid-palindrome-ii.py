@@ -8,7 +8,7 @@
 class Solution:
     def validPalindrome(self, s: str) -> bool:
         def check_palindrome(i, j):
-            if 0>=i>len(s) and 0>=j>len(s):
+            if 0>i>=len(s) and 0>j>=len(s):
                 return False
 
             while i < j:
